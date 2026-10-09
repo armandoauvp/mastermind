@@ -389,6 +389,11 @@ button { font: inherit; color: inherit; }
   .hero-bg, .hero-fg { object-position: 60% 25%; }
 }
 
+/* telas em pé recebem o recorte vertical (centrado no Raul) */
+@media (orientation: portrait) {
+  .hero-bg, .hero-fg { object-position: 50% 18%; }
+}
+
 /* palavras do título: no HTML o texto é corrido; o JS só envolve cada palavra */
 [data-split] .w {
   display: inline-block;
@@ -1163,16 +1168,17 @@ button { font: inherit; color: inherit; }
    ========================================================= */
 
 /* capa: a luz acende e as palavras do título sobem */
-.motion .hero-media { animation: luz 1400ms var(--ease-out) both; }
+.motion .hero-media { animation: luz 600ms var(--ease-out) both; }
 @keyframes luz {
-  from { filter: brightness(.2); }
+  from { filter: brightness(.55); }
   to { filter: brightness(1); }
 }
 .motion [data-split] .w > span {
   transform: translateY(110%);
-  animation: sobe 900ms var(--ease-out) forwards;
-  animation-delay: calc(250ms + var(--i, 0) * 70ms);
+  animation: sobe 600ms var(--ease-out) forwards;
+  animation-delay: calc(40ms + var(--i, 0) * 40ms);
 }
+.motion .hero [data-reveal] { transition-duration: 600ms; }
 @keyframes sobe { to { transform: translateY(0); } }
 
 /* revelação ao rolar */

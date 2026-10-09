@@ -28,12 +28,10 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
   <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-latin.woff2" crossorigin>
-  <!-- Fontes do rodapé, iguais às do site AUVP Capital. Carregam sem bloquear a renderização -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@600&family=Roboto:wght@500&family=Sora:wght@400&display=swap" media="print" onload="this.media='all'">
-  <link rel="preload" as="image" href="/img/hero-fundo-2400.webp" imagesrcset="/img/hero-fundo-1280.webp 1280w, /img/hero-fundo-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
-  <link rel="preload" as="image" href="/img/hero-recorte-2400.webp" imagesrcset="/img/hero-recorte-1280.webp 1280w, /img/hero-recorte-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(orientation: portrait)" imagesrcset="/img/hero-fundo-m-600.webp 600w, /img/hero-fundo-m-900.webp 900w" imagesizes="56.25vh" fetchpriority="high">
+  <link rel="preload" as="image" media="(orientation: portrait)" imagesrcset="/img/hero-recorte-m-600.webp 600w, /img/hero-recorte-m-900.webp 900w" imagesizes="56.25vh" fetchpriority="high">
+  <link rel="preload" as="image" media="(orientation: landscape)" imagesrcset="/img/hero-fundo-1280.webp 1280w, /img/hero-fundo-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(orientation: landscape)" imagesrcset="/img/hero-recorte-1280.webp 1280w, /img/hero-recorte-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
   <link rel="stylesheet" href="/src/main.css">
   <script>
     // js: há script. motion: animações ligadas (sem preferência por movimento reduzido)
@@ -138,18 +136,24 @@
     <!-- Topo: capa em tela cheia. Foto original, véus em degradê, recorte do Raul por cima -->
     <section class="hero" id="topo" aria-labelledby="titulo-principal">
       <div class="hero-media">
-        <img class="hero-bg"
-          src="/img/hero-fundo-2400.webp"
-          srcset="/img/hero-fundo-1280.webp 1280w, /img/hero-fundo-2400.webp 2400w"
-          sizes="100vw" width="2400" height="1600"
-          alt="" fetchpriority="high" decoding="async">
+        <picture>
+          <source media="(orientation: portrait)" srcset="/img/hero-fundo-m-600.webp 600w, /img/hero-fundo-m-900.webp 900w" sizes="56.25vh">
+          <img class="hero-bg"
+            src="/img/hero-fundo-2400.webp"
+            srcset="/img/hero-fundo-1280.webp 1280w, /img/hero-fundo-2400.webp 2400w"
+            sizes="100vw" width="2400" height="1600"
+            alt="" fetchpriority="high" decoding="async">
+        </picture>
         <span class="hero-veil" aria-hidden="true"></span>
-        <img class="hero-fg"
-          src="/img/hero-recorte-2400.webp"
-          srcset="/img/hero-recorte-1280.webp 1280w, /img/hero-recorte-2400.webp 2400w"
-          sizes="100vw" width="2400" height="1600"
-          alt="Raul Sena, fundador da AUVP, fala ao microfone no palco"
-          fetchpriority="high" decoding="async">
+        <picture>
+          <source media="(orientation: portrait)" srcset="/img/hero-recorte-m-600.webp 600w, /img/hero-recorte-m-900.webp 900w" sizes="56.25vh">
+          <img class="hero-fg"
+            src="/img/hero-recorte-2400.webp"
+            srcset="/img/hero-recorte-1280.webp 1280w, /img/hero-recorte-2400.webp 2400w"
+            sizes="100vw" width="2400" height="1600"
+            alt="Raul Sena, fundador da AUVP, fala ao microfone no palco"
+            fetchpriority="high" decoding="async">
+        </picture>
         <span class="hero-fade" aria-hidden="true"></span>
       </div>
       <div class="hero-copy">

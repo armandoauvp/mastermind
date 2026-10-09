@@ -29,6 +29,24 @@ document.querySelectorAll('.data-hoje').forEach((el) => {
   el.replaceChildren(mes, document.createElement('br'), `de ${hoje.getFullYear()}`);
 });
 
+// Fontes do rodapé (iguais às do site AUVP Capital): só carregam quando o rodapé se aproxima,
+// para não disputar banda com a capa no carregamento
+const rodape = document.querySelector('.site-footer');
+if (rodape) {
+  const carregaFontes = () => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://fonts.googleapis.com/css2?family=Anek+Latin:wght@600&family=Roboto:wght@500&family=Sora:wght@400&display=swap';
+    document.head.append(link);
+  };
+  const fio = new IntersectionObserver(([e]) => {
+    if (!e.isIntersecting) return;
+    fio.disconnect();
+    carregaFontes();
+  }, { rootMargin: '1200px 0px' });
+  fio.observe(rodape);
+}
+
 // Cabeçalho: transparente sobre a capa, sólido quando a capa sai
 const header = document.querySelector('.site-header');
 const hero = document.querySelector('.hero');
@@ -55,7 +73,7 @@ if (motion) {
   document.querySelectorAll('[data-reveal-group]').forEach((g) => {
     [...g.children].forEach((c, i) => c.style.setProperty('--d', i));
   });
-  document.querySelectorAll('.hero [data-reveal]').forEach((el, i) => el.style.setProperty('--d', 6 + i * 2));
+  document.querySelectorAll('.hero [data-reveal]').forEach((el, i) => el.style.setProperty('--d', 2 + i));
   document.querySelectorAll('.seis-dots .pessoa.on').forEach((d, i) => d.style.setProperty('--k', i));
 
   const io = new IntersectionObserver((entries) => {
