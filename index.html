@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mastermind com Raul Sena no Rio de Janeiro | AUVP Negócios</title>
+  <meta name="description" content="Mentoria presencial com Raul Sena para donos de empresa. Leve os desafios do seu negócio e saia com o próximo passo. 21 de outubro, no Rio de Janeiro.">
+
+  <!-- PENDENTE: trocar https://example.com/mastermind pela URL final (canonical, og:url, JSON-LD) -->
+  <link rel="canonical" href="https://example.com/mastermind">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="AUVP Negócios">
+  <meta property="og:title" content="Mastermind com Raul Sena no Rio de Janeiro | AUVP Negócios">
+  <meta property="og:description" content="Mentoria presencial com Raul Sena para donos de empresa. Leve os desafios do seu negócio e saia com o próximo passo. 21 de outubro, no Rio de Janeiro.">
+  <meta property="og:url" content="https://example.com/mastermind">
+  <meta property="og:image" content="https://example.com/img/og-mastermind-raul-sena.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Raul Sena, fundador da AUVP, fala ao microfone no palco">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mastermind com Raul Sena no Rio de Janeiro | AUVP Negócios">
+  <meta name="twitter:description" content="Mentoria presencial com Raul Sena para donos de empresa. Leve os desafios do seu negócio e saia com o próximo passo. 21 de outubro, no Rio de Janeiro.">
+  <meta name="twitter:image" content="https://example.com/img/og-mastermind-raul-sena.jpg">
+
+  <meta name="theme-color" content="#101010">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-latin.woff2" crossorigin>
+  <!-- Fontes do rodapé, iguais às do site AUVP Capital. Carregam sem bloquear a renderização -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@600&family=Roboto:wght@500&family=Sora:wght@400&display=swap" media="print" onload="this.media='all'">
+  <link rel="preload" as="image" href="/img/hero-fundo-2400.webp" imagesrcset="/img/hero-fundo-1280.webp 1280w, /img/hero-fundo-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" href="/img/hero-recorte-2400.webp" imagesrcset="/img/hero-recorte-1280.webp 1280w, /img/hero-recorte-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="/src/main.css">
+  <script>
+    // js: há script. motion: animações ligadas (sem preferência por movimento reduzido)
+    document.documentElement.classList.replace('no-js', 'js');
+    if (matchMedia('(prefers-reduced-motion: no-preference)').matches) document.documentElement.classList.add('motion');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://example.com/#auvp",
+        "name": "AUVP",
+        "url": "https://auvp.com.br"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://example.com/#raul-sena",
+        "name": "Raul Sena",
+        "jobTitle": "Empresário, investidor e educador financeiro",
+        "description": "Fundador da AUVP e da AUVP Capital.",
+        "image": "https://example.com/img/og-mastermind-raul-sena.jpg",
+        "worksFor": { "@id": "https://example.com/#auvp" }
+      },
+      {
+        "@type": "Event",
+        "@id": "https://example.com/mastermind#evento",
+        "name": "Mastermind AUVP Negócios com Raul Sena",
+        "description": "Um dia de mentoria presencial com Raul Sena para colocar os problemas da sua empresa na mesa e sair com o próximo passo para cada um deles.",
+        "startDate": "2026-10-21",
+        "endDate": "2026-10-21",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Rio de Janeiro",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Rio de Janeiro",
+            "addressRegion": "RJ",
+            "addressCountry": "BR"
+          }
+        },
+        "image": ["https://example.com/img/og-mastermind-raul-sena.jpg"],
+        "organizer": { "@id": "https://example.com/#auvp" },
+        "performer": { "@id": "https://example.com/#raul-sena" },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://example.com/pagamento",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "O que é o Mastermind?", "acceptedAnswer": { "@type": "Answer", "text": "É um dia de mentoria presencial com Raul Sena e um grupo de donos de empresa. Cada participante leva uma situação real do próprio negócio: um problema, uma decisão em aberto ou uma dúvida do dia a dia. A partir dessas situações, o Raul apresenta a leitura dele sobre caminhos possíveis, e os participantes trocam experiências entre si." } },
+          { "@type": "Question", "name": "É um evento de palestras?", "acceptedAnswer": { "@type": "Answer", "text": "Não. A dinâmica é de conversa. O que entra na discussão são os casos que os participantes levam, e é a partir deles que o Raul aponta caminhos possíveis." } },
+          { "@type": "Question", "name": "Vou poder falar da minha empresa?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. É assim que o encontro funciona. Quanto mais concreta a situação que você levar, mais útil a conversa tende a ser para você e para os outros participantes." } },
+          { "@type": "Question", "name": "Para quem é o evento?", "acceptedAnswer": { "@type": "Answer", "text": "Para empresários que já têm uma empresa em operação e um time formado, e que chegam dispostos a discutir a própria situação com outros donos de empresa." } },
+          { "@type": "Question", "name": "Quem conduz o Mastermind?", "acceptedAnswer": { "@type": "Answer", "text": "Raul Sena, fundador da AUVP e da AUVP Capital. Ele estudou em programas executivos de Harvard, Wharton, INSEAD e Babson, toca os próprios negócios no Brasil e conduz a conversa do dia a partir dos casos que aparecem." } },
+          { "@type": "Question", "name": "O Mastermind é um curso de Harvard, Wharton ou INSEAD?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O Mastermind é um encontro da AUVP. Os programas executivos dessas escolas formaram parte do repertório usado para analisar as situações que aparecem na conversa." } },
+          { "@type": "Question", "name": "Onde e quando vai acontecer?", "acceptedAnswer": { "@type": "Answer", "text": "No dia 21 de outubro, no Rio de Janeiro. O endereço completo e os horários são enviados para quem se inscreve." } },
+          { "@type": "Question", "name": "Qual é o investimento?", "acceptedAnswer": { "@type": "Answer", "text": "O valor aparece na página de pagamento, ao clicar em qualquer botão desta página." } },
+          { "@type": "Question", "name": "Como faço para garantir a minha vaga?", "acceptedAnswer": { "@type": "Answer", "text": "Pelos botões desta página. Você é levado direto para o pagamento e recebe a confirmação por e-mail." } },
+          { "@type": "Question", "name": "A inscrição no Mastermind inclui o AUVP Business Day?", "acceptedAnswer": { "@type": "Answer", "text": "Não. São eventos com inscrições separadas. O AUVP Business Day acontece em Goiânia, ainda em 2027, e terá data, programação e inscrições divulgadas em breve." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- PENDENTE: trocar https://example.com/pagamento pela URL de pagamento em todos os botões -->
+  <header class="site-header">
+    <div class="header-row">
+      <a class="brand cell" href="#topo">
+        <img class="brand-logo" src="/brand/auvp-negocios-horizontal-branco.svg" width="1690" height="183" alt="AUVP Negócios, início da página">
+      </a>
+      <nav class="site-nav" id="menu" aria-label="Seções da página">
+        <ul>
+          <li><a class="cell" href="#sobre-raul-sena">Sobre Raul Sena</a></li>
+          <li><a class="cell" href="#para-quem-e">Para quem é</a></li>
+          <li><a class="cell" href="#duvidas">Dúvidas</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle cell" type="button" aria-expanded="false" aria-controls="menu">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <span class="sr-only">Abrir menu</span>
+      </button>
+      <a class="btn btn-header" href="https://example.com/pagamento">Quero participar</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- Topo: capa em tela cheia. Foto original, véus em degradê, recorte do Raul por cima -->
+    <section class="hero" id="topo" aria-labelledby="titulo-principal">
+      <div class="hero-media">
+        <img class="hero-bg"
+          src="/img/hero-fundo-2400.webp"
+          srcset="/img/hero-fundo-1280.webp 1280w, /img/hero-fundo-2400.webp 2400w"
+          sizes="100vw" width="2400" height="1600"
+          alt="" fetchpriority="high" decoding="async">
+        <span class="hero-veil" aria-hidden="true"></span>
+        <img class="hero-fg"
+          src="/img/hero-recorte-2400.webp"
+          srcset="/img/hero-recorte-1280.webp 1280w, /img/hero-recorte-2400.webp 2400w"
+          sizes="100vw" width="2400" height="1600"
+          alt="Raul Sena, fundador da AUVP, fala ao microfone no palco"
+          fetchpriority="high" decoding="async">
+        <span class="hero-fade" aria-hidden="true"></span>
+      </div>
+      <div class="hero-copy">
+        <h1 id="titulo-principal" class="display" data-split>Dê o próximo passo da sua empresa com Raul Sena.</h1>
+        <p class="hero-lede" data-reveal>Um dia de mentoria presencial com Raul Sena para colocar os problemas da sua empresa na mesa e sair com o próximo passo para cada um deles.</p>
+        <p class="hero-when" data-reveal><time datetime="2026-10-21">Dia 21 de outubro</time>, no Rio de Janeiro.</p>
+        <a class="btn" href="https://example.com/pagamento" data-reveal>Quero participar</a>
+      </div>
+    </section>
+
+    <!-- Onde as empresas travam: dados com contagem e barras animadas (valores finais já no HTML) -->
+    <section class="dobra light dados" id="onde-as-empresas-travam" aria-labelledby="t-dados">
+      <div class="dados-head">
+        <h2 id="t-dados" class="h2" data-reveal>A maioria das empresas travam nos mesmos lugares.</h2>
+        <div class="seis" data-reveal>
+          <div class="seis-dots" role="img" aria-label="Seis de dez pessoas destacadas">
+            <svg class="pessoa on" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M3.5 21.5c0-4.9 3.8-8 8.5-8s8.5 3.1 8.5 8z"/></svg><svg class="pessoa on" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M3.5 21.5c0-4.9 3.8-8 8.5-8s8.5 3.1 8.5 8z"/></svg><svg class="pessoa on" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M3.5 21.5c0-4.9 3.8-8 8.5-8s8.5 3.1 8.5 8z"/></svg><svg class="pessoa on" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M3.5 21.5c0-4.9 3.8-8 8.5-8s8.5 3.1 8.5 8z"/></svg><svg class="pessoa on" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M3.5 21.5c0-4.9 3.8-8 8.5-8s8.5 3.1 8.5 8z"/></svg><svg class="pessoa on" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M3.5 21.5c0-4.9 3.8-8 8.5-8s8.5 3.1 8.5 8z"/></svg><svg class="pessoa" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M3.5 21.5c0-4.9 3.8-8 8.5-8s8.5 3.1 8.5 8z"/></svg><svg class="pessoa" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M3.5 21.5c0-4.9 3.8-8 8.5-8s8.5 3.1 8.5 8z"/></svg><svg class="pessoa" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M3.5 21.5c0-4.9 3.8-8 8.5-8s8.5 3.1 8.5 8z"/></svg><svg class="pessoa" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M3.5 21.5c0-4.9 3.8-8 8.5-8s8.5 3.1 8.5 8z"/></svg>
+          </div>
+          <p class="lede">Seis em cada dez donos de empresa estão se estruturando para o negócio crescer.</p>
+        </div>
+      </div>
+      <figure class="dados-fig" data-reveal>
+        <ul class="bars" aria-label="Onde eles mais encontram dificuldade">
+          <li class="bar-row">
+            <span class="bar-num" data-count="84" aria-hidden="true">84%</span><span class="sr-only">84%</span>
+            <span class="bar-label">Aumentar o faturamento e fazer a empresa crescer</span>
+            <span class="bar-track" aria-hidden="true"><span class="bar-fill" style="--v: 84%"></span></span>
+          </li>
+          <li class="bar-row">
+            <span class="bar-num" data-count="78" aria-hidden="true">78%</span><span class="sr-only">78%</span>
+            <span class="bar-label">Enfrentar a concorrência do mercado em que atua</span>
+            <span class="bar-track" aria-hidden="true"><span class="bar-fill" style="--v: 78%"></span></span>
+          </li>
+          <li class="bar-row">
+            <span class="bar-num" data-count="73" aria-hidden="true">73%</span><span class="sr-only">73%</span>
+            <span class="bar-label">Desenvolver estratégias eficazes de marketing e vendas</span>
+            <span class="bar-track" aria-hidden="true"><span class="bar-fill" style="--v: 73%"></span></span>
+          </li>
+        </ul>
+        <p class="source">Pesquisa Cabeça de Dono, Instituto Locomotiva para o Itaú Empresas, 2024. Base: 1.001 donos de empresas com faturamento anual entre R$ 360 mil e R$ 50 milhões.</p>
+      </figure>
+      <p class="dados-fecho"><span class="f1">Nenhum desses pontos se resolve só com <span class="risco">mais horas de trabalho</span>.</span> <strong class="f2">Todos se resolvem com uma <mark class="marca">sequência de decisões certas</mark>, tomadas na <mark class="marca">ordem certa</mark>.</strong></p>
+    </section>
+
+    <!-- O peso de decidir sozinho: as situações caem, uma a uma, sobre o tampo da mesa -->
+    <section class="pilha" id="decidir-sozinho" aria-labelledby="t-sozinho">
+      <div class="pilha-stage">
+        <div class="pilha-text">
+          <h2 id="t-sozinho" class="h2">Você é a última instância de tudo que acontece na sua empresa.</h2>
+          <p class="lede">Você contratou gente boa e dividiu tarefas. Ainda assim, há decisões que continuam só suas e áreas que só você toca. Ninguém por perto carrega o mesmo risco.</p>
+          <p class="pilha-intro">Talvez alguma destas situações seja familiar:</p>
+          <div class="pilha-status">
+            <p class="pilha-count" aria-hidden="true"><span class="pilha-n">0</span> de 6 decisões esperando por você</p>
+            <p class="pilha-fecho">Cada uma dessas situações já foi enfrentada, e resolvida, por alguém que passou pelo mesmo que você está passando agora.</p>
+          </div>
+        </div>
+        <div class="pilha-mesa">
+          <ul class="notas">
+            <li class="nota" tabindex="0">Adiar uma decisão grande por não ter com quem discutir antes.</li>
+            <li class="nota" tabindex="0">Saber que precisa mudar algo em marketing, sem saber dizer o quê.</li>
+            <li class="nota" tabindex="0">Perceber tarde demais que a concorrência mudou de posição.</li>
+            <li class="nota" tabindex="0">Repetir a mesma estratégia há anos enquanto o mercado muda todo dia.</li>
+            <li class="nota" tabindex="0">Ver o faturamento crescer sem saber qual foi o motivo para replicar.</li>
+            <li class="nota" tabindex="0">Passar meses sem parar um dia para pensar bem na própria empresa.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Casos: um jornal sobre a faixa amarela. Folhas com frente e verso; o scroll vira as folhas.
+         Capa sozinha; depois as duplas Lloyds | TAG Heuer e Nissan | chamada. -->
+    <section class="jornal-band" id="casos" aria-labelledby="t-casos">
+      <div class="flip-track">
+        <div class="flip-stage">
+          <div class="book">
+
+            <div class="sheet">
+              <article class="pg pg-front pg-capa" aria-labelledby="t-casos">
+                <header class="pg-mast">
+                  <span class="ear">Goiânia,<br>Goiás</span>
+                  <img class="mast-logo" src="/brand/auvp-negocios-horizontal-preto.svg" width="1690" height="183" alt="AUVP Negócios">
+                  <!-- data do dia, preenchida pelo JS no navegador de quem lê -->
+                  <span class="ear ear-r"><time class="data-hoje"></time></span>
+                </header>
+                <div class="capa-lead">
+                  <h2 id="t-casos" class="capa-headline">Até as maiores empresas do mundo passaram por isso.</h2>
+                  <p class="capa-dek">Impasses de crescimento, de concorrência e de liderança continuam aparecendo conforme a empresa cresce, só que com outros números.</p>
+                </div>
+                <figure class="story-photo capa-photo">
+                  <img src="/img/jornal-capa-1400.webp" srcset="/img/jornal-capa-800.webp 800w, /img/jornal-capa-1400.webp 1400w" sizes="(min-width: 960px) 600px, 92vw" width="1400" height="933" alt="Raul Sena de braços abertos no palco, diante da plateia de um evento da AUVP, em preto e branco" loading="lazy" decoding="async">
+                  <figcaption>Raul Sena e a plateia de um evento da AUVP.</figcaption>
+                </figure>
+                <footer class="pg-folio"><span>Casos</span><span>1</span></footer>
+              </article>
+
+              <article class="pg pg-back" aria-labelledby="caso-lloyds">
+                <header class="pg-mast pg-mast-sm">
+                  <span class="ear">2</span>
+                  <span class="ear ear-r">Casos</span>
+                </header>
+                <div class="story">
+                  <h3 id="caso-lloyds" class="story-title">Lloyds Bank</h3>
+                  <p class="story-text">À beira de uma crise, o banco passou a investir apenas em negócios com retorno acima do custo do capital. Vendeu todo o resto e se tornou o banco mais valioso da Europa.</p>
+                  <figure class="story-photo">
+                    <img src="/img/caso-lloyds-1400.webp" srcset="/img/caso-lloyds-800.webp 800w, /img/caso-lloyds-1400.webp 1400w" sizes="(min-width: 960px) 600px, 92vw" width="1400" height="1050" alt="Prédio do Lloyds Bank na City de Londres, em preto e branco" loading="lazy" decoding="async">
+                    <figcaption>Prédio do Lloyds Bank na City de Londres.</figcaption>
+                  </figure>
+                </div>
+                <footer class="pg-folio"><span>AUVP Negócios</span><span>2</span></footer>
+              </article>
+            </div>
+
+            <div class="sheet">
+              <article class="pg pg-front" aria-labelledby="caso-tag-heuer">
+                <header class="pg-mast pg-mast-sm">
+                  <span class="ear">Casos</span>
+                  <span class="ear ear-r">3</span>
+                </header>
+                <div class="story">
+                  <h3 id="caso-tag-heuer" class="story-title">TAG Heuer</h3>
+                  <p class="story-text">Com a entrada da Apple no mercado de relógios, a marca precisou escolher entre reforçar a tradição do relógio mecânico ou lançar o próprio modelo conectado.</p>
+                  <figure class="story-photo">
+                    <img src="/img/caso-tagheuer-800.webp" srcset="/img/caso-tagheuer-520.webp 520w, /img/caso-tagheuer-800.webp 800w" sizes="(min-width: 960px) 600px, 92vw" width="800" height="1067" alt="Galeria envidraçada que leva a uma loja da TAG Heuer, em preto e branco" loading="lazy" decoding="async">
+                    <figcaption>Loja da TAG Heuer no Design District, em Miami.</figcaption>
+                  </figure>
+                </div>
+                <footer class="pg-folio"><span>AUVP Negócios</span><span>3</span></footer>
+              </article>
+
+              <article class="pg pg-back" aria-labelledby="caso-nissan">
+                <header class="pg-mast pg-mast-sm">
+                  <span class="ear">4</span>
+                  <span class="ear ear-r">Casos</span>
+                </header>
+                <div class="story">
+                  <h3 id="caso-nissan" class="story-title">Nissan</h3>
+                  <p class="story-text">Em situação crítica, a montadora foi reestruturada a partir da escuta das equipes internas e voltou a ser uma das mais valiosas do setor.</p>
+                  <figure class="story-photo">
+                    <img src="/img/caso-nissan-1000.webp" srcset="/img/caso-nissan-640.webp 640w, /img/caso-nissan-1000.webp 1000w" sizes="(min-width: 960px) 600px, 92vw" width="1000" height="750" alt="Entrada da sede global da Nissan, em Yokohama, em preto e branco" loading="lazy" decoding="async">
+                    <figcaption>Sede global da Nissan, em Yokohama.</figcaption>
+                  </figure>
+                </div>
+                <footer class="pg-folio"><span>AUVP Negócios</span><span>4</span></footer>
+              </article>
+            </div>
+
+            <div class="sheet sheet-last">
+              <article class="pg pg-front pg-cta" aria-label="Chamada para o Mastermind">
+                <header class="pg-mast pg-mast-sm">
+                  <span class="ear">Casos</span>
+                  <span class="ear ear-r">5</span>
+                </header>
+                <div class="cta-box">
+                  <p class="cta-kicker"><span>Mastermind</span><span>com Raul Sena</span></p>
+                  <p class="cta-text">É de casos assim que sai boa parte do que se discute no Mastermind. Aprenda com essas empresas antes de errar na sua.</p>
+                  <p class="cta-when"><time datetime="2026-10-21">21 de outubro</time><span>Rio de Janeiro</span></p>
+                  <a class="btn btn-ink" href="https://example.com/pagamento">Quero aprender antes de errar</a>
+                </div>
+                <img class="cta-logo" src="/brand/auvp-negocios-horizontal-preto.svg" width="1690" height="183" alt="">
+                <footer class="pg-folio"><span>AUVP Negócios</span><span>5</span></footer>
+              </article>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Raul Sena -->
+    <section class="sobre" id="sobre-raul-sena" aria-labelledby="t-sobre">
+      <div class="sobre-cover">
+        <img
+          src="/img/raul-sena-palco-1200.webp"
+          srcset="/img/raul-sena-palco-800.webp 800w, /img/raul-sena-palco-1200.webp 1200w, /img/raul-sena-palco-2000.webp 2000w"
+          sizes="100vw"
+          width="2000" height="1334"
+          alt="Raul Sena de costas, sentado à mesa no palco, diante da plateia de um evento da AUVP"
+          loading="lazy" decoding="async" data-parallax="0.12">
+        <div class="sobre-title">
+          <h2 id="t-sobre" class="display" data-reveal>Sobre Raul Sena</h2>
+          <p class="cargo" data-reveal>Empresário, investidor e educador financeiro</p>
+        </div>
+      </div>
+      <div class="dobra sobre-body">
+        <figure class="sobre-photo" data-reveal>
+          <img
+            src="/img/raul-sena-auvp-1200.webp"
+            srcset="/img/raul-sena-auvp-720.webp 720w, /img/raul-sena-auvp-1200.webp 1200w"
+            sizes="(min-width: 960px) 40vw, 100vw"
+            width="1200" height="1263"
+            alt="Raul Sena, fundador da AUVP, sentado à mesa diante do letreiro iluminado da AUVP"
+            loading="lazy" decoding="async">
+        </figure>
+        <div class="sobre-text" data-reveal-group>
+          <p class="sobre-lede">Raul Sena não herdou empresa nenhuma. Começou a trabalhar aos 15 anos e aprendeu a decidir decidindo, como todo dono, sem ninguém para consultar antes.</p>
+          <p>Empreendeu em segmentos completamente diferentes. Entre acertos e erros, foi ali que ele construiu quase tudo o que sabe hoje. Em paralelo, fez o que todo empresário deveria fazer: nunca parou de estudar.</p>
+          <p>Por esse caminho fundou a AUVP, a maior escola de investimentos do Brasil e a consultoria top 1 no ranking do BTG Pactual pelo segundo ano consecutivo.</p>
+          <p>E é dessa combinação que vem a leitura que ele vai dar sobre os desafios da sua empresa: o repertório de quem estudou as decisões das maiores empresas do mundo, e a prática de quem decide há anos no mesmo mercado que você.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formação -->
+    <section class="dobra light escolas" id="formacao" aria-labelledby="t-escolas">
+      <div class="escolas-head">
+        <h2 id="t-escolas" class="h2" data-reveal>Conhecimento vindo das maiores escolas de negócio do mundo.</h2>
+        <p class="lede" data-reveal>Os programas executivos destas quatro universidades formaram parte do repertório usado para analisar o caso de cada participante.</p>
+      </div>
+      <div class="escolas-list">
+        <article class="escola" data-reveal>
+          <h3 class="escola-nome">Harvard</h3>
+          <figure class="escola-foto">
+            <img src="/img/escola-harvard-800.webp" srcset="/img/escola-harvard-520.webp 520w, /img/escola-harvard-800.webp 800w" sizes="(min-width: 960px) 24vw, 100vw" width="800" height="600" alt="Baker Library, prédio da Harvard Business School" loading="lazy" decoding="async">
+          </figure>
+          <p>Os estudos de caso de empresas feitos lá viraram o material de ensino usado em escolas de negócio do mundo inteiro.</p>
+        </article>
+        <article class="escola" data-reveal>
+          <h3 class="escola-nome">Wharton</h3>
+          <figure class="escola-foto">
+            <img src="/img/escola-wharton-800.webp" srcset="/img/escola-wharton-520.webp 520w, /img/escola-wharton-800.webp 800w" sizes="(min-width: 960px) 24vw, 100vw" width="800" height="600" alt="Huntsman Hall, prédio da Wharton School" loading="lazy" decoding="async">
+          </figure>
+          <p>Escola de negócios da Universidade da Pensilvânia, referência na formação de executivos em finanças e estratégia.</p>
+        </article>
+        <article class="escola" data-reveal>
+          <h3 class="escola-nome">INSEAD</h3>
+          <figure class="escola-foto">
+            <img src="/img/escola-insead-800.webp" srcset="/img/escola-insead-520.webp 520w, /img/escola-insead-800.webp 800w" sizes="(min-width: 960px) 24vw, 100vw" width="800" height="600" alt="Campus do INSEAD em Fontainebleau" loading="lazy" decoding="async">
+          </figure>
+          <p>Escola europeia conhecida pelos programas que reúnem executivos de empresas de vários países na mesma sala.</p>
+        </article>
+        <article class="escola" data-reveal>
+          <h3 class="escola-nome">Babson</h3>
+          <figure class="escola-foto">
+            <img src="/img/escola-babson-800.webp" srcset="/img/escola-babson-520.webp 520w, /img/escola-babson-800.webp 800w" sizes="(min-width: 960px) 24vw, 100vw" width="800" height="600" alt="Muro de entrada do Babson College" loading="lazy" decoding="async">
+          </figure>
+          <p>Escola americana reconhecida como referência mundial no ensino de empreendedorismo.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Para quem é -->
+    <section class="dobra fit" id="para-quem-e" aria-labelledby="t-fit">
+      <div class="fit-head">
+        <h2 id="t-fit" class="h2" data-reveal>O Mastermind é para você?</h2>
+        <p class="lede" data-reveal>O dia é feito do que os participantes levam. Funciona para quem chega disposto a falar da própria empresa.</p>
+      </div>
+      <div class="fit-cols">
+        <div class="fit-col fit-yes">
+          <h3 class="fit-title" data-reveal>É para quem:</h3>
+          <ul class="fit-list" data-reveal-group>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Tem uma empresa em operação e um time formado.</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Chega com uma situação concreta do negócio para colocar na mesa.</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Entende que estudar faz parte do trabalho de quem tem uma empresa.</span></li>
+          </ul>
+        </div>
+        <div class="fit-col fit-no">
+          <h3 class="fit-title" data-reveal>Não é para quem:</h3>
+          <ul class="fit-list" data-reveal-group>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg><span>Procura fórmula pronta ou resultado rápido.</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg><span>Prefere assistir do que participar.</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg><span>Acha que já sabe tudo o que precisa saber sobre o próprio negócio.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="fit-cta" data-reveal>
+        <a class="btn" href="https://example.com/pagamento">Quero participar</a>
+      </div>
+    </section>
+
+    <!-- AUVP Business Day: faixa secundária, mais baixa que as outras dobras -->
+    <section class="bday" id="auvp-business-day" aria-labelledby="t-bday">
+      <div class="bday-left" data-reveal>
+        <h2 id="t-bday" class="bday-selo">AUVP Business Day</h2>
+        <p class="bday-call">Ainda em 2027, a AUVP reúne empresários em Goiânia.</p>
+      </div>
+      <div class="bday-right" data-reveal>
+        <p>Três dias de encontro para donos de empresa, como continuação do que começa em outubro. Data, programação e inscrições serão divulgadas em breve.</p>
+        <p class="bday-ressalva">A inscrição no Mastermind não inclui o AUVP Business Day.</p>
+      </div>
+    </section>
+
+    <!-- Dúvidas -->
+    <section class="dobra light split faq" id="duvidas" aria-labelledby="t-faq">
+      <div class="split-aside">
+        <h2 id="t-faq" class="h2" data-reveal>Dúvidas sobre o Mastermind</h2>
+      </div>
+      <div class="split-main faq-list" data-reveal-group>
+        <details>
+          <summary><h3>O que é o Mastermind?</h3><span class="plus" aria-hidden="true"></span></summary>
+          <p>É um dia de mentoria presencial com Raul Sena e um grupo de donos de empresa. Cada participante leva uma situação real do próprio negócio: um problema, uma decisão em aberto ou uma dúvida do dia a dia. A partir dessas situações, o Raul apresenta a leitura dele sobre caminhos possíveis, e os participantes trocam experiências entre si.</p>
+        </details>
+        <details>
+          <summary><h3>É um evento de palestras?</h3><span class="plus" aria-hidden="true"></span></summary>
+          <p>Não. A dinâmica é de conversa. O que entra na discussão são os casos que os participantes levam, e é a partir deles que o Raul aponta caminhos possíveis.</p>
+        </details>
+        <details>
+          <summary><h3>Vou poder falar da minha empresa?</h3><span class="plus" aria-hidden="true"></span></summary>
+          <p>Sim. É assim que o encontro funciona. Quanto mais concreta a situação que você levar, mais útil a conversa tende a ser para você e para os outros participantes.</p>
+        </details>
+        <details>
+          <summary><h3>Para quem é o evento?</h3><span class="plus" aria-hidden="true"></span></summary>
+          <p>Para empresários que já têm uma empresa em operação e um time formado, e que chegam dispostos a discutir a própria situação com outros donos de empresa.</p>
+        </details>
+        <details>
+          <summary><h3>Quem conduz o Mastermind?</h3><span class="plus" aria-hidden="true"></span></summary>
+          <p>Raul Sena, fundador da AUVP e da AUVP Capital. Ele estudou em programas executivos de Harvard, Wharton, INSEAD e Babson, toca os próprios negócios no Brasil e conduz a conversa do dia a partir dos casos que aparecem.</p>
+        </details>
+        <details>
+          <summary><h3>O Mastermind é um curso de Harvard, Wharton ou INSEAD?</h3><span class="plus" aria-hidden="true"></span></summary>
+          <p>Não. O Mastermind é um encontro da AUVP. Os programas executivos dessas escolas formaram parte do repertório usado para analisar as situações que aparecem na conversa.</p>
+        </details>
+        <details>
+          <summary><h3>Onde e quando vai acontecer?</h3><span class="plus" aria-hidden="true"></span></summary>
+          <p>No dia 21 de outubro, no Rio de Janeiro. O endereço completo e os horários são enviados para quem se inscreve.</p>
+        </details>
+        <details>
+          <summary><h3>Qual é o investimento?</h3><span class="plus" aria-hidden="true"></span></summary>
+          <p>O valor aparece na página de pagamento, ao clicar em qualquer botão desta página.</p>
+        </details>
+        <details>
+          <summary><h3>Como faço para garantir a minha vaga?</h3><span class="plus" aria-hidden="true"></span></summary>
+          <p>Pelos botões desta página. Você é levado direto para o pagamento e recebe a confirmação por e-mail.</p>
+        </details>
+        <details>
+          <summary><h3>A inscrição no Mastermind inclui o AUVP Business Day?</h3><span class="plus" aria-hidden="true"></span></summary>
+          <p>Não. São eventos com inscrições separadas. O AUVP Business Day acontece em Goiânia, ainda em 2027, e terá data, programação e inscrições divulgadas em breve.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Chamada final -->
+    <section class="final" id="inscricao" aria-labelledby="t-final">
+      <figure class="final-photo">
+        <img
+          src="/img/raul-sena-conversa-palco-1000.webp"
+          srcset="/img/raul-sena-conversa-palco-640.webp 640w, /img/raul-sena-conversa-palco-1000.webp 1000w"
+          sizes="(min-width: 960px) 45vw, 100vw"
+          width="1000" height="1250"
+          alt="Vista do alto do palco: Raul Sena conversa à mesa com participantes diante de uma cortina"
+          loading="lazy" decoding="async" data-parallax="0.1">
+      </figure>
+      <div class="final-body">
+        <h2 id="t-final" class="h2" data-reveal>Um dia inteiro com a sua empresa na pauta.</h2>
+        <p class="lede" data-reveal>Garanta o seu lugar no Mastermind do dia 21 de outubro, no Rio de Janeiro.</p>
+
+        <!-- PENDENTE: confirmar o ano. A contagem lê a data deste atributo -->
+        <div class="countdown" role="timer" aria-label="Tempo até o Mastermind" data-target="2026-10-21T00:00:00-03:00" data-reveal>
+          <div class="cd-cell"><span class="cd-num" data-unit="d">--</span><span class="cd-unit">dias</span></div>
+          <div class="cd-cell"><span class="cd-num" data-unit="h">--</span><span class="cd-unit">horas</span></div>
+          <div class="cd-cell"><span class="cd-num" data-unit="m">--</span><span class="cd-unit">minutos</span></div>
+          <div class="cd-cell"><span class="cd-num" data-unit="s">--</span><span class="cd-unit">segundos</span></div>
+        </div>
+
+        <a class="btn btn-lg" href="https://example.com/pagamento" data-reveal>Comprar meu ingresso</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé no estilo do site AUVP Capital (marca, colunas de links, outros produtos) -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="/brand/auvp-negocios-horizontal-branco.svg" width="1690" height="183" alt="AUVP Negócios" loading="lazy">
+        <p>Mastermind com Raul Sena, <time datetime="2026-10-21">21 de outubro</time>, no Rio de Janeiro.</p>
+        <p>Orgulhosamente feito sob o sol escaldante de Goiás <span aria-hidden="true">☀️</span></p>
+        <!-- PENDENTE: razão social e CNPJ da empresa que vende o Mastermind -->
+      </div>
+      <div class="site-footer__col">
+        <h2>Mastermind</h2>
+        <ul>
+          <li><a href="#sobre-raul-sena">Sobre Raul Sena</a></li>
+          <li><a href="#para-quem-e">Para quem é</a></li>
+          <li><a href="#auvp-business-day">AUVP Business Day</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+          <li><a href="https://example.com/pagamento">Quero participar</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col site-footer__col--wide">
+        <h2>Outros produtos</h2>
+        <ul class="site-footer__grid">
+          <li><a href="https://www.auvp.com.br/" target="_blank" rel="noopener">AUVP Escola</a></li>
+          <li><a href="https://auvpcapital.com.br/" target="_blank" rel="noopener">AUVP Capital</a></li>
+          <li><a href="https://analitica.auvp.com.br/" target="_blank" rel="noopener">AUVP Analítica</a></li>
+          <li><a href="https://auvp.pro/" target="_blank" rel="noopener">AUVP Pro</a></li>
+          <li><a href="https://auvpagro.com.br/" target="_blank" rel="noopener">AUVP Agro</a></li>
+          <li><a href="https://auvpnews.com.br/" target="_blank" rel="noopener">AUVP News</a></li>
+          <li><a href="https://auvpcapital.com.br/wealth/" target="_blank" rel="noopener">AUVP Wealth</a></li>
+          <li><a href="https://auvpcapital.com.br/credito/" target="_blank" rel="noopener">AUVP Crédito</a></li>
+          <li><a href="https://auvpcapital.com.br/cambio/" target="_blank" rel="noopener">AUVP Câmbio</a></li>
+          <li><a href="https://auvpcapital.com.br/seguros/" target="_blank" rel="noopener">AUVP Seguros</a></li>
+          <li><a href="https://www.auvpetfs.com.br/" target="_blank" rel="noopener">AUVP ETFs</a></li>
+          <li><a href="https://auvpcapital.com.br/corporate/" target="_blank" rel="noopener">AUVP Corporate</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="creditos">Créditos das imagens, via Wikimedia Commons, adaptadas: Lloyds Bank por <a href="https://commons.wikimedia.org/wiki/File:Lloyds_Bank,_City_of_London_(Northeast_View_-_01).jpg">Doyle of London</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>); TAG Heuer por <a href="https://commons.wikimedia.org/wiki/File:Design_District,_Miami,_Florida_2021_-_TAGHeuer.jpg">Sharon Hahn Darlin</a> (<a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>); Nissan por <a href="https://commons.wikimedia.org/wiki/File:NISSAN_GLOBAL_HEADQUARTERS_(1).jpg">Tokumeigakarinoaoshima</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>); Harvard por <a href="https://commons.wikimedia.org/wiki/File:Baker_Library,_Harvard_Business_School,_Allston_MA.jpg">John Phelan</a> (<a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>); Wharton por <a href="https://commons.wikimedia.org/wiki/File:UPenn_-_The_Wharton_School_of_Business_-_Huntsman_Hall_(53590621660).jpg">ajay_suresh</a> (<a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>); INSEAD por <a href="https://commons.wikimedia.org/wiki/File:2018-03-10_13-30-20_-_Fontainebleau_-_INSEAD.jpg">Baidax</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>); Babson por <a href="https://commons.wikimedia.org/wiki/File:Babson_College_entrance.jpg">Kenneth C. Zirkel</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>); textura de madeira por <a href="https://commons.wikimedia.org/wiki/File:Texture_de_noyer.jpg">Cyril5555</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>).</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
