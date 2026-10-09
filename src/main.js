@@ -20,13 +20,13 @@ if (toggle && nav) {
   });
 }
 
-// Jornal: a data da capa é sempre a do dia, em duas linhas ("9 de outubro / de 2026")
+// Jornal: a data da capa acompanha o mês corrente, em duas linhas ("outubro / de 2026")
 document.querySelectorAll('.data-hoje').forEach((el) => {
   const hoje = new Date();
   const pad = (n) => String(n).padStart(2, '0');
-  el.dateTime = `${hoje.getFullYear()}-${pad(hoje.getMonth() + 1)}-${pad(hoje.getDate())}`;
-  const diaMes = hoje.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long' });
-  el.replaceChildren(diaMes, document.createElement('br'), `de ${hoje.getFullYear()}`);
+  el.dateTime = `${hoje.getFullYear()}-${pad(hoje.getMonth() + 1)}`;
+  const mes = hoje.toLocaleDateString('pt-BR', { month: 'long' });
+  el.replaceChildren(mes, document.createElement('br'), `de ${hoje.getFullYear()}`);
 });
 
 // Cabeçalho: transparente sobre a capa, sólido quando a capa sai
@@ -167,6 +167,7 @@ if (motion && pilha) {
 
 // ---------- Motor de rolagem: capa, cabeçalho, paralaxe e jornal ----------
 
+const progressBar = document.querySelector('.scroll-progress span');
 const heroMedia = document.querySelector('.hero-media');
 const heroCopy = document.querySelector('.hero-copy');
 const parallaxEls = [...document.querySelectorAll('[data-parallax]')];
@@ -187,6 +188,12 @@ function trackProgress(el) {
 
 function onScroll() {
   const vh = innerHeight;
+
+  // filete de progresso da leitura
+  if (progressBar) {
+    const max = document.documentElement.scrollHeight - vh;
+    progressBar.style.transform = `scaleX(${max > 0 ? clamp(scrollY / max) : 0})`;
+  }
 
   // cabeçalho
   if (header && hero) {

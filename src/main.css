@@ -215,6 +215,23 @@ button { font: inherit; color: inherit; }
   --hline: var(--line);
   background: var(--bg);
 }
+/* filete de progresso na base do cabeçalho: cresce da esquerda conforme a página rola */
+.scroll-progress {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -1px;
+  height: 2px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.scroll-progress span {
+  display: block;
+  height: 100%;
+  background: var(--yellow);
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+.no-js .scroll-progress { display: none; }
 .header-row {
   display: flex;
   align-items: stretch;
@@ -481,7 +498,17 @@ button { font: inherit; color: inherit; }
   .seis { grid-template-columns: 1fr; row-gap: 20px; }
   .dados-fig { grid-column: 1 / 13; }
   .bar-row { grid-template-columns: 13rem 1fr; column-gap: 40px; }
-  .dados-fecho { grid-column: 1 / 13; }
+  /* fecho: as duas frases lado a lado */
+  .dados-fecho {
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(40px, 5vw, 96px);
+    align-items: start;
+    max-width: none;
+    font-size: clamp(1.75rem, 1rem + 1.9vw, 3.25rem);
+  }
+  .dados-fecho .f2 { margin-top: 0; }
 }
 
 /* ---------- Pilha na mesa ---------- */
