@@ -28,10 +28,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
   <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-latin.woff2" crossorigin>
-  <link rel="preload" as="image" media="(orientation: portrait)" imagesrcset="/img/hero-fundo-m-600.webp 600w, /img/hero-fundo-m-900.webp 900w" imagesizes="56.25vh" fetchpriority="high">
-  <link rel="preload" as="image" media="(orientation: portrait)" imagesrcset="/img/hero-recorte-m-600.webp 600w, /img/hero-recorte-m-900.webp 900w" imagesizes="56.25vh" fetchpriority="high">
-  <link rel="preload" as="image" media="(orientation: landscape)" imagesrcset="/img/hero-fundo-1280.webp 1280w, /img/hero-fundo-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
-  <link rel="preload" as="image" media="(orientation: landscape)" imagesrcset="/img/hero-recorte-1280.webp 1280w, /img/hero-recorte-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" imagesrcset="/img/hero-trofeu-fundo-720.webp 720w, /img/hero-trofeu-fundo-1080.webp 1080w" imagesizes="56.25vh" fetchpriority="high">
+  <link rel="preload" as="image" imagesrcset="/img/hero-trofeu-recorte-720.webp 720w, /img/hero-trofeu-recorte-1080.webp 1080w" imagesizes="56.25vh" fetchpriority="high">
   <link rel="stylesheet" href="/src/main.css">
   <script>
     // js: há script. motion: animações ligadas (sem preferência por movimento reduzido)
@@ -136,29 +134,23 @@
     <!-- Topo: capa em tela cheia. Foto original, véus em degradê, recorte do Raul por cima -->
     <section class="hero" id="topo" aria-labelledby="titulo-principal">
       <div class="hero-media">
-        <picture>
-          <source media="(orientation: portrait)" srcset="/img/hero-fundo-m-600.webp 600w, /img/hero-fundo-m-900.webp 900w" sizes="56.25vh">
-          <img class="hero-bg"
-            src="/img/hero-fundo-2400.webp"
-            srcset="/img/hero-fundo-1280.webp 1280w, /img/hero-fundo-2400.webp 2400w"
-            sizes="100vw" width="2400" height="1600"
-            alt="" fetchpriority="high" decoding="async">
-        </picture>
+        <img class="hero-bg"
+          src="/img/hero-trofeu-fundo-1080.webp"
+          srcset="/img/hero-trofeu-fundo-720.webp 720w, /img/hero-trofeu-fundo-1080.webp 1080w"
+          sizes="56.25vh" width="1080" height="1920"
+          alt="" fetchpriority="high" decoding="async">
         <span class="hero-veil" aria-hidden="true"></span>
-        <picture>
-          <source media="(orientation: portrait)" srcset="/img/hero-recorte-m-600.webp 600w, /img/hero-recorte-m-900.webp 900w" sizes="56.25vh">
-          <img class="hero-fg"
-            src="/img/hero-recorte-2400.webp"
-            srcset="/img/hero-recorte-1280.webp 1280w, /img/hero-recorte-2400.webp 2400w"
-            sizes="100vw" width="2400" height="1600"
-            alt="Raul Sena, fundador da AUVP, fala ao microfone no palco"
-            fetchpriority="high" decoding="async">
-        </picture>
+        <img class="hero-fg"
+          src="/img/hero-trofeu-recorte-1080.webp"
+          srcset="/img/hero-trofeu-recorte-720.webp 720w, /img/hero-trofeu-recorte-1080.webp 1080w"
+          sizes="56.25vh" width="1080" height="1920"
+          alt="Raul Sena, fundador da AUVP, ergue um troféu no palco"
+          fetchpriority="high" decoding="async">
         <span class="hero-fade" aria-hidden="true"></span>
       </div>
       <div class="hero-copy">
         <h1 id="titulo-principal" class="display" data-split>Dê o próximo passo da sua empresa com Raul Sena.</h1>
-        <p class="hero-lede" data-reveal>Um dia de mentoria presencial com Raul Sena para colocar os problemas da sua empresa na mesa e sair com o próximo passo para cada um deles.</p>
+        <p class="hero-lede" data-reveal>Um dia de mentoria presencial para colocar os problemas da sua empresa na mesa e sair com o próximo passo para cada um deles.</p>
         <p class="hero-when" data-reveal><time datetime="2026-10-21">Dia 21 de outubro</time>, no Rio de Janeiro.</p>
         <a class="btn" href="https://example.com/pagamento" data-reveal>Quero participar</a>
       </div>
@@ -204,13 +196,13 @@
         <div class="pilha-text">
           <h2 id="t-sozinho" class="h2">Você é a última instância de tudo que acontece na sua empresa.</h2>
           <p class="lede">Você contratou gente boa e dividiu tarefas. Ainda assim, há decisões que continuam só suas e áreas que só você toca. Ninguém por perto carrega o mesmo risco.</p>
-          <p class="pilha-intro">Talvez alguma destas situações seja familiar:</p>
           <div class="pilha-status">
             <p class="pilha-count" aria-hidden="true"><span class="pilha-n">0</span> de 6 decisões esperando por você</p>
             <p class="pilha-fecho">Cada uma dessas situações já foi enfrentada, e resolvida, por alguém que passou pelo mesmo que você está passando agora.</p>
           </div>
         </div>
         <div class="pilha-mesa">
+          <p class="pilha-intro">Talvez alguma destas situações seja familiar:</p>
           <ul class="notas">
             <li class="nota" tabindex="0">Adiar uma decisão grande por não ter com quem discutir antes.</li>
             <li class="nota" tabindex="0">Saber que precisa mudar algo em marketing, sem saber dizer o quê.</li>

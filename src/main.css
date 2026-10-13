@@ -339,7 +339,7 @@ button { font: inherit; color: inherit; }
 .hero-bg,
 .hero-fg {
   object-fit: cover;
-  object-position: 64% 20%;
+  object-position: 50% 22%;
 }
 /* véus entre a foto e o recorte: escurecem o fundo, o Raul fica com brilho total */
 .hero-veil {
@@ -354,12 +354,21 @@ button { font: inherit; color: inherit; }
     linear-gradient(to top, var(--bg) 0%, rgb(16 16 16 / .85) 16%, rgb(16 16 16 / 0) 46%),
     linear-gradient(to bottom, rgb(16 16 16 / .55) 0%, rgb(16 16 16 / 0) 16%);
 }
-/* no celular o texto fica na base, sobre o corpo do Raul: degradê mais alto para leitura */
+/* celular: a foto vertical ocupa o alto da tela (rosto acima do texto);
+   a base dela se dissolve no preto sob o título */
 @media (max-width: 959px) {
+  /* capa um pouco mais alta que a tela: o título começa abaixo do rosto */
+  .hero { min-height: 116svh; }
+  .hero-media {
+    top: var(--header-h);
+    bottom: auto;
+    height: 72svh;
+  }
+  .hero-bg, .hero-fg { object-position: 50% 10%; }
   .hero-fade {
     background:
-      linear-gradient(to top, var(--bg) 0%, rgb(16 16 16 / .9) 30%, rgb(16 16 16 / .5) 50%, rgb(16 16 16 / 0) 68%),
-      linear-gradient(to bottom, rgb(16 16 16 / .55) 0%, rgb(16 16 16 / 0) 16%);
+      linear-gradient(to top, var(--bg) 0%, rgb(16 16 16 / .85) 18%, rgb(16 16 16 / .35) 34%, rgb(16 16 16 / 0) 48%),
+      linear-gradient(to bottom, rgb(16 16 16 / .45) 0%, rgb(16 16 16 / 0) 12%);
   }
 }
 .hero-copy { position: relative; }
@@ -384,14 +393,32 @@ button { font: inherit; color: inherit; }
     align-items: center;
   }
   .hero-copy { grid-column: 1 / 8; }
-  /* título termina antes da mão do Raul (que começa em ~43% da largura) */
   .hero-copy .display { font-size: clamp(3.5rem, 1rem + 4.6vw, 7rem); }
-  .hero-bg, .hero-fg { object-position: 60% 25%; }
-}
 
-/* telas em pé recebem o recorte vertical (centrado no Raul) */
-@media (orientation: portrait) {
-  .hero-bg, .hero-fg { object-position: 50% 18%; }
+  /* foto vertical: no desktop vira uma coluna em pé à direita, com toda a altura da capa */
+  .hero-media {
+    top: var(--header-h); /* o troféu não fica atrás do menu */
+    left: auto;
+    right: max(var(--gutter), calc((100vw - 1600px) / 2));
+    width: auto;
+    aspect-ratio: 9 / 16;
+  }
+  .hero-bg, .hero-fg { object-position: 50% 50%; }
+  /* véus entre a foto e o recorte: o fundo da foto se dissolve no preto pelas bordas */
+  .hero-veil {
+    background:
+      linear-gradient(to right, var(--bg) 0%, rgb(16 16 16 / .55) 26%, rgb(16 16 16 / .2) 55%, rgb(16 16 16 / .55) 85%, var(--bg) 100%),
+      linear-gradient(to bottom, rgb(16 16 16 / .5) 0%, rgb(16 16 16 / 0) 30%),
+      rgb(16 16 16 / .15);
+  }
+  /* degradê final por cima de tudo: bordas da coluna somem no fundo da página */
+  .hero-fade {
+    background:
+      linear-gradient(to top, var(--bg) 0%, rgb(16 16 16 / .75) 12%, rgb(16 16 16 / 0) 32%),
+      linear-gradient(to right, var(--bg) 0%, rgb(16 16 16 / 0) 9%),
+      linear-gradient(to left, var(--bg) 0%, rgb(16 16 16 / 0) 7%),
+      linear-gradient(to bottom, rgb(16 16 16 / .55) 0%, rgb(16 16 16 / 0) 14%);
+  }
 }
 
 /* palavras do título: no HTML o texto é corrido; o JS só envolve cada palavra */
@@ -556,7 +583,14 @@ button { font: inherit; color: inherit; }
   padding: clamp(88px, 10vw, 144px) var(--pad-x);
 }
 .pilha-text { display: grid; gap: 22px; align-content: start; }
-.pilha-intro { font-weight: 600; font-size: 1.125rem; }
+/* título da pilha: fica na coluna dos bilhetes, logo acima deles */
+.pilha-intro {
+  font-weight: 600;
+  font-size: clamp(1.125rem, 1rem + .4vw, 1.375rem);
+  padding-bottom: 14px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgb(245 244 241 / .35);
+}
 .pilha-status { display: grid; }
 .pilha-status > * { grid-area: 1 / 1; }
 .pilha-count { display: none; }
@@ -592,14 +626,13 @@ button { font: inherit; color: inherit; }
   box-shadow: 0 1px 2px rgb(0 0 0 / .35), 0 14px 28px -12px rgb(0 0 0 / .7);
   transform: rotate(var(--r, 0deg));
 }
-/* posição de cada bilhete na pilha do desktop: cada um cai um pouco abaixo do anterior,
-   e o de baixo continua mostrando a primeira linha */
-.nota:nth-child(1) { --r: -1.6deg; --x: -40px; --y: -120px; }
-.nota:nth-child(2) { --r: 1.4deg;  --x: 30px;  --y: -72px; }
-.nota:nth-child(3) { --r: -.8deg;  --x: -18px; --y: -24px; }
-.nota:nth-child(4) { --r: 2deg;    --x: 38px;  --y: 24px; }
-.nota:nth-child(5) { --r: -2.2deg; --x: -32px; --y: 72px; }
-.nota:nth-child(6) { --r: .9deg;   --x: 12px;  --y: 120px; }
+/* inclinação de cada bilhete */
+.nota:nth-child(1) { --r: -1.6deg; }
+.nota:nth-child(2) { --r: 1.4deg; }
+.nota:nth-child(3) { --r: -.8deg; }
+.nota:nth-child(4) { --r: 2deg; }
+.nota:nth-child(5) { --r: -2.2deg; }
+.nota:nth-child(6) { --r: .9deg; }
 
 @media (min-width: 720px) {
   .notas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1292,34 +1325,6 @@ button { font: inherit; color: inherit; }
   transform: translateY(-6px) rotate(0deg);
   box-shadow: 0 2px 4px rgb(0 0 0 / .35), 0 24px 40px -14px rgb(0 0 0 / .75);
   transition-duration: 200ms;
-}
-
-/* desktop: as notas se empilham na mesa, cada uma um pouco deslocada e torta */
-@media (min-width: 960px) {
-  .motion .notas {
-    display: block;
-    position: relative;
-    height: min(62svh, 540px);
-  }
-  .motion .nota {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: min(440px, 86%);
-    cursor: default;
-    transform:
-      translate(-50%, -50%)
-      translate(var(--x), calc(var(--y) - 55svh))
-      rotate(calc(var(--r) + 16deg));
-  }
-  .motion .nota.is-in {
-    transform: translate(-50%, -50%) translate(var(--x), var(--y)) rotate(var(--r));
-  }
-  .motion .nota.is-in:hover,
-  .motion .nota.is-in:focus-visible {
-    z-index: 10;
-    transform: translate(-50%, -50%) translate(var(--x), calc(var(--y) - 14px)) rotate(0deg) scale(1.03);
-  }
 }
 
 /* jornal no celular: cada página pousa ao entrar na tela */
