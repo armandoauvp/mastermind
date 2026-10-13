@@ -392,16 +392,29 @@ button { font: inherit; color: inherit; }
     column-gap: 32px;
     align-items: center;
   }
-  .hero-copy { grid-column: 1 / 8; }
+  .hero-copy { grid-column: 1 / 7; }
   .hero-copy .display { font-size: clamp(3.5rem, 1rem + 4.6vw, 7rem); }
 
   /* foto vertical: no desktop vira uma coluna em pé à direita, com toda a altura da capa */
   .hero-media {
     top: var(--header-h); /* o troféu não fica atrás do menu */
+    bottom: auto;
     left: auto;
     right: max(var(--gutter), calc((100vw - 1600px) / 2));
+    /* maior que a capa: o Raul ganha escala e as pernas saem pela base */
+    height: 132%;
     width: auto;
     aspect-ratio: 9 / 16;
+  }
+  /* degradê na base da capa: a foto, que passa da altura, some no preto */
+  .hero::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 34%;
+    z-index: -1;
+    background: linear-gradient(to top, var(--bg) 0%, rgb(16 16 16 / .8) 35%, rgb(16 16 16 / 0) 100%);
+    pointer-events: none;
   }
   .hero-bg, .hero-fg { object-position: 50% 50%; }
   /* véus entre a foto e o recorte: o fundo da foto se dissolve no preto pelas bordas */
