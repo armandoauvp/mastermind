@@ -169,14 +169,10 @@ if (motion) {
 const pilha = document.querySelector('.pilha');
 if (motion && pilha) {
   const notas = [...pilha.querySelectorAll('.nota')];
-  const pilhaN = pilha.querySelector('.pilha-n');
   const pio = new IntersectionObserver(([entry]) => {
     if (!entry.isIntersecting) return;
     pio.disconnect();
-    notas.forEach((n, i) => setTimeout(() => {
-      n.classList.add('is-in');
-      pilhaN.textContent = i + 1;
-    }, 250 + i * 520));
+    notas.forEach((n, i) => setTimeout(() => n.classList.add('is-in'), 250 + i * 520));
     setTimeout(() => pilha.classList.add('is-done'), 250 + notas.length * 520 + 700);
   }, { threshold: 0.35 });
   pio.observe(pilha.querySelector('.notas'));
