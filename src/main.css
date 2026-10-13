@@ -344,9 +344,8 @@ button { font: inherit; color: inherit; }
 /* véus entre a foto e o recorte: escurecem o fundo, o Raul fica com brilho total */
 .hero-veil {
   background:
-    linear-gradient(to bottom, rgb(16 16 16 / .7) 0%, rgb(16 16 16 / .35) 35%, rgb(16 16 16 / .95) 100%),
-    linear-gradient(to right, rgb(16 16 16 / .92) 0%, rgb(16 16 16 / .5) 42%, rgb(16 16 16 / 0) 72%),
-    rgb(16 16 16 / .25);
+    linear-gradient(to bottom, rgb(16 16 16 / .6) 0%, rgb(16 16 16 / .3) 35%, rgb(16 16 16 / .95) 100%),
+    rgb(16 16 16 / .3);
 }
 /* degradê final por cima de tudo: base some no preto e o topo dá leitura ao menu */
 .hero-fade {
@@ -392,45 +391,22 @@ button { font: inherit; color: inherit; }
     column-gap: 32px;
     align-items: center;
   }
-  .hero-copy { grid-column: 1 / 7; }
+  /* foto do escritório: Raul à esquerda, título à direita sobre a área escura da própria foto */
+  .hero-copy { grid-column: 7 / 13; }
   .hero-copy .display { font-size: clamp(3.5rem, 1rem + 4.6vw, 7rem); }
-
-  /* foto vertical: no desktop vira uma coluna em pé à direita, com toda a altura da capa */
-  .hero-media {
-    top: var(--header-h); /* o troféu não fica atrás do menu */
-    bottom: auto;
-    left: auto;
-    right: max(var(--gutter), calc((100vw - 1600px) / 2));
-    /* maior que a capa: o Raul ganha escala e as pernas saem pela base */
-    height: 132%;
-    width: auto;
-    aspect-ratio: 9 / 16;
-  }
-  /* degradê na base da capa: a foto, que passa da altura, some no preto */
-  .hero::after {
-    content: "";
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    height: 34%;
-    z-index: -1;
-    background: linear-gradient(to top, var(--bg) 0%, rgb(16 16 16 / .8) 35%, rgb(16 16 16 / 0) 100%);
-    pointer-events: none;
-  }
-  .hero-bg, .hero-fg { object-position: 50% 50%; }
-  /* véus entre a foto e o recorte: o fundo da foto se dissolve no preto pelas bordas */
+  .hero-bg, .hero-fg { object-position: 28% 50%; }
+  /* véus entre a foto e o recorte: escurecem o lado do texto; o Raul fica com brilho total */
   .hero-veil {
     background:
-      linear-gradient(to right, var(--bg) 0%, rgb(16 16 16 / .55) 26%, rgb(16 16 16 / .2) 55%, rgb(16 16 16 / .55) 85%, var(--bg) 100%),
-      linear-gradient(to bottom, rgb(16 16 16 / .5) 0%, rgb(16 16 16 / 0) 30%),
-      rgb(16 16 16 / .15);
+      linear-gradient(to left, rgb(16 16 16 / .92) 0%, rgb(16 16 16 / .6) 35%, rgb(16 16 16 / 0) 62%),
+      linear-gradient(to bottom, rgb(16 16 16 / .55) 0%, rgb(16 16 16 / 0) 25%),
+      rgb(16 16 16 / .28);
   }
-  /* degradê final por cima de tudo: bordas da coluna somem no fundo da página */
+  /* degradê final por cima de tudo: base e topo somem no preto */
   .hero-fade {
     background:
-      linear-gradient(to top, var(--bg) 0%, rgb(16 16 16 / .75) 12%, rgb(16 16 16 / 0) 32%),
-      linear-gradient(to right, var(--bg) 0%, rgb(16 16 16 / 0) 9%),
-      linear-gradient(to left, var(--bg) 0%, rgb(16 16 16 / 0) 7%),
-      linear-gradient(to bottom, rgb(16 16 16 / .55) 0%, rgb(16 16 16 / 0) 14%);
+      linear-gradient(to top, var(--bg) 0%, rgb(16 16 16 / .7) 14%, rgb(16 16 16 / 0) 38%),
+      linear-gradient(to bottom, rgb(16 16 16 / .55) 0%, rgb(16 16 16 / 0) 16%);
   }
 }
 

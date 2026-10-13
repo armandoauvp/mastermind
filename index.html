@@ -28,8 +28,10 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
   <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-latin.woff2" crossorigin>
-  <link rel="preload" as="image" imagesrcset="/img/hero-trofeu-fundo-720.webp 720w, /img/hero-trofeu-fundo-1080.webp 1080w" imagesizes="56.25vh" fetchpriority="high">
-  <link rel="preload" as="image" imagesrcset="/img/hero-trofeu-recorte-720.webp 720w, /img/hero-trofeu-recorte-1080.webp 1080w" imagesizes="56.25vh" fetchpriority="high">
+  <link rel="preload" as="image" media="(orientation: portrait)" href="/img/hero-escritorio-fundo-m-544.webp" fetchpriority="high">
+  <link rel="preload" as="image" media="(orientation: portrait)" href="/img/hero-escritorio-recorte-m-544.webp" fetchpriority="high">
+  <link rel="preload" as="image" media="(orientation: landscape)" imagesrcset="/img/hero-escritorio-fundo-1080.webp 1080w, /img/hero-escritorio-fundo-1440.webp 1440w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(orientation: landscape)" imagesrcset="/img/hero-escritorio-recorte-1080.webp 1080w, /img/hero-escritorio-recorte-1440.webp 1440w" imagesizes="100vw" fetchpriority="high">
   <link rel="stylesheet" href="/src/main.css">
   <script>
     // js: há script. motion: animações ligadas (sem preferência por movimento reduzido)
@@ -134,18 +136,24 @@
     <!-- Topo: capa em tela cheia. Foto original, véus em degradê, recorte do Raul por cima -->
     <section class="hero" id="topo" aria-labelledby="titulo-principal">
       <div class="hero-media">
-        <img class="hero-bg"
-          src="/img/hero-trofeu-fundo-1080.webp"
-          srcset="/img/hero-trofeu-fundo-720.webp 720w, /img/hero-trofeu-fundo-1080.webp 1080w"
-          sizes="56.25vh" width="1080" height="1920"
-          alt="" fetchpriority="high" decoding="async">
+        <picture>
+          <source media="(orientation: portrait)" srcset="/img/hero-escritorio-fundo-m-544.webp">
+          <img class="hero-bg"
+            src="/img/hero-escritorio-fundo-1440.webp"
+            srcset="/img/hero-escritorio-fundo-1080.webp 1080w, /img/hero-escritorio-fundo-1440.webp 1440w"
+            sizes="100vw" width="1440" height="780"
+            alt="" fetchpriority="high" decoding="async">
+        </picture>
         <span class="hero-veil" aria-hidden="true"></span>
-        <img class="hero-fg"
-          src="/img/hero-trofeu-recorte-1080.webp"
-          srcset="/img/hero-trofeu-recorte-720.webp 720w, /img/hero-trofeu-recorte-1080.webp 1080w"
-          sizes="56.25vh" width="1080" height="1920"
-          alt="Raul Sena, fundador da AUVP, ergue um troféu no palco"
-          fetchpriority="high" decoding="async">
+        <picture>
+          <source media="(orientation: portrait)" srcset="/img/hero-escritorio-recorte-m-544.webp">
+          <img class="hero-fg"
+            src="/img/hero-escritorio-recorte-1440.webp"
+            srcset="/img/hero-escritorio-recorte-1080.webp 1080w, /img/hero-escritorio-recorte-1440.webp 1440w"
+            sizes="100vw" width="1440" height="780"
+            alt="Raul Sena, fundador da AUVP, à mesa em seu escritório, diante de uma estante de livros"
+            fetchpriority="high" decoding="async">
+        </picture>
         <span class="hero-fade" aria-hidden="true"></span>
       </div>
       <div class="hero-copy">
