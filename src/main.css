@@ -391,14 +391,14 @@ button { font: inherit; color: inherit; }
     column-gap: 32px;
     align-items: center;
   }
-  /* foto do escritório: Raul à esquerda, título à direita sobre a área escura da própria foto */
-  .hero-copy { grid-column: 7 / 13; }
+  /* foto do escritório (espelhada): Raul à direita, título à esquerda sobre a área escura da própria foto */
+  .hero-copy { grid-column: 1 / 7; }
   .hero-copy .display { font-size: clamp(3.5rem, 1rem + 4.6vw, 7rem); }
-  .hero-bg, .hero-fg { object-position: 28% 50%; }
+  .hero-bg, .hero-fg { object-position: 72% 50%; }
   /* véus entre a foto e o recorte: escurecem o lado do texto; o Raul fica com brilho total */
   .hero-veil {
     background:
-      linear-gradient(to left, rgb(16 16 16 / .92) 0%, rgb(16 16 16 / .6) 35%, rgb(16 16 16 / 0) 62%),
+      linear-gradient(to right, rgb(16 16 16 / .92) 0%, rgb(16 16 16 / .6) 35%, rgb(16 16 16 / 0) 62%),
       linear-gradient(to bottom, rgb(16 16 16 / .55) 0%, rgb(16 16 16 / 0) 25%),
       rgb(16 16 16 / .28);
   }
