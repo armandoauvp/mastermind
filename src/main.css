@@ -371,8 +371,7 @@ button { font: inherit; color: inherit; }
   }
 }
 .hero-copy { position: relative; }
-.hero-eyebrow { color: var(--yellow); margin-bottom: 18px; }
-.hero-copy .display { max-width: 15ch; }
+.hero-copy .display { max-width: none; }
 .hero-lede {
   margin-top: 24px;
   max-width: 36ch;
