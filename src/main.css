@@ -371,7 +371,8 @@ button { font: inherit; color: inherit; }
   }
 }
 .hero-copy { position: relative; }
-.hero-copy .display { max-width: 13ch; }
+.hero-eyebrow { color: var(--yellow); margin-bottom: 18px; }
+.hero-copy .display { max-width: 15ch; }
 .hero-lede {
   margin-top: 24px;
   max-width: 36ch;
@@ -393,7 +394,7 @@ button { font: inherit; color: inherit; }
   }
   /* foto do escritório (espelhada): Raul à direita, título à esquerda sobre a área escura da própria foto */
   .hero-copy { grid-column: 1 / 7; }
-  .hero-copy .display { font-size: clamp(3.5rem, 1rem + 4.6vw, 7rem); }
+  .hero-copy .display { font-size: clamp(3.25rem, 1rem + 3.9vw, 6.25rem); }
   .hero-bg, .hero-fg { object-position: 78% 50%; }
   /* véus entre a foto e o recorte: escurecem o lado do texto; o Raul fica com brilho total */
   .hero-veil {
@@ -447,6 +448,7 @@ button { font: inherit; color: inherit; }
 }
 
 .dados-fig { display: grid; gap: 20px; }
+.dados-rotulo { color: var(--muted); margin-bottom: -8px; }
 .bars { list-style: none; border-bottom: 1px solid var(--line); }
 .bar-row {
   display: grid;
