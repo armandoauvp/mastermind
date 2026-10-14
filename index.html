@@ -28,10 +28,10 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
   <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-latin.woff2" crossorigin>
-  <link rel="preload" as="image" media="(orientation: portrait)" href="/img/hero-escritorio-espelhada-fundo-m-544.webp" fetchpriority="high">
-  <link rel="preload" as="image" media="(orientation: portrait)" href="/img/hero-escritorio-espelhada-recorte-m-544.webp" fetchpriority="high">
-  <link rel="preload" as="image" media="(orientation: landscape)" imagesrcset="/img/hero-escritorio-espelhada-fundo-1080.webp 1080w, /img/hero-escritorio-espelhada-fundo-1440.webp 1440w" imagesizes="100vw" fetchpriority="high">
-  <link rel="preload" as="image" media="(orientation: landscape)" imagesrcset="/img/hero-escritorio-espelhada-recorte-1080.webp 1080w, /img/hero-escritorio-espelhada-recorte-1440.webp 1440w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(orientation: portrait)" imagesrcset="/img/hero-escritorio-hd-fundo-m-720.webp 720w, /img/hero-escritorio-hd-fundo-m-1080.webp 1080w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(orientation: portrait)" imagesrcset="/img/hero-escritorio-hd-recorte-m-720.webp 720w, /img/hero-escritorio-hd-recorte-m-1080.webp 1080w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(orientation: landscape)" imagesrcset="/img/hero-escritorio-hd-fundo-1080.webp 1080w, /img/hero-escritorio-hd-fundo-1600.webp 1600w, /img/hero-escritorio-hd-fundo-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(orientation: landscape)" imagesrcset="/img/hero-escritorio-hd-recorte-1080.webp 1080w, /img/hero-escritorio-hd-recorte-1600.webp 1600w, /img/hero-escritorio-hd-recorte-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
   <link rel="stylesheet" href="/src/main.css">
   <script>
     // js: há script. motion: animações ligadas (sem preferência por movimento reduzido)
@@ -82,7 +82,7 @@
         "performer": { "@id": "https://example.com/#raul-sena" },
         "offers": {
           "@type": "Offer",
-          "url": "https://example.com/pagamento",
+          "url": "https://matricula.auvp.com.br/pay/mastermind-auvp-negocios-rio-de-janeiro",
           "availability": "https://schema.org/InStock"
         }
       },
@@ -108,7 +108,7 @@
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-  <!-- PENDENTE: trocar https://example.com/pagamento pela URL de pagamento em todos os botões -->
+  <!-- PENDENTE: trocar https://matricula.auvp.com.br/pay/mastermind-auvp-negocios-rio-de-janeiro pela URL de pagamento em todos os botões -->
   <header class="site-header">
     <div class="header-row">
       <a class="brand cell" href="#topo">
@@ -125,7 +125,7 @@
         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         <span class="sr-only">Abrir menu</span>
       </button>
-      <a class="btn btn-header" href="https://example.com/pagamento">Quero participar</a>
+      <a class="btn btn-header" href="https://matricula.auvp.com.br/pay/mastermind-auvp-negocios-rio-de-janeiro">Quero participar</a>
     </div>
     <!-- filete de progresso da leitura, como no site institucional -->
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
@@ -137,20 +137,20 @@
     <section class="hero" id="topo" aria-labelledby="titulo-principal">
       <div class="hero-media">
         <picture>
-          <source media="(orientation: portrait)" srcset="/img/hero-escritorio-espelhada-fundo-m-544.webp">
+          <source media="(orientation: portrait)" srcset="/img/hero-escritorio-hd-fundo-m-720.webp 720w, /img/hero-escritorio-hd-fundo-m-1080.webp 1080w" sizes="100vw">
           <img class="hero-bg"
-            src="/img/hero-escritorio-espelhada-fundo-1440.webp"
-            srcset="/img/hero-escritorio-espelhada-fundo-1080.webp 1080w, /img/hero-escritorio-espelhada-fundo-1440.webp 1440w"
-            sizes="100vw" width="1440" height="780"
+            src="/img/hero-escritorio-hd-fundo-1600.webp"
+            srcset="/img/hero-escritorio-hd-fundo-1080.webp 1080w, /img/hero-escritorio-hd-fundo-1600.webp 1600w, /img/hero-escritorio-hd-fundo-2400.webp 2400w"
+            sizes="100vw" width="1600" height="867"
             alt="" fetchpriority="high" decoding="async">
         </picture>
         <span class="hero-veil" aria-hidden="true"></span>
         <picture>
-          <source media="(orientation: portrait)" srcset="/img/hero-escritorio-espelhada-recorte-m-544.webp">
+          <source media="(orientation: portrait)" srcset="/img/hero-escritorio-hd-recorte-m-720.webp 720w, /img/hero-escritorio-hd-recorte-m-1080.webp 1080w" sizes="100vw">
           <img class="hero-fg"
-            src="/img/hero-escritorio-espelhada-recorte-1440.webp"
-            srcset="/img/hero-escritorio-espelhada-recorte-1080.webp 1080w, /img/hero-escritorio-espelhada-recorte-1440.webp 1440w"
-            sizes="100vw" width="1440" height="780"
+            src="/img/hero-escritorio-hd-recorte-1600.webp"
+            srcset="/img/hero-escritorio-hd-recorte-1080.webp 1080w, /img/hero-escritorio-hd-recorte-1600.webp 1600w, /img/hero-escritorio-hd-recorte-2400.webp 2400w"
+            sizes="100vw" width="1600" height="867"
             alt="Raul Sena, fundador da AUVP, à mesa em seu escritório, diante de uma estante de livros"
             fetchpriority="high" decoding="async">
         </picture>
@@ -160,7 +160,7 @@
         <h1 id="titulo-principal" class="display" data-split>Dê o próximo passo da sua empresa com Raul Sena.</h1>
         <p class="hero-lede" data-reveal>Um dia de mentoria presencial para colocar os problemas da sua empresa na mesa e sair com o próximo passo para cada um deles.</p>
         <p class="hero-when" data-reveal><time datetime="2026-10-21">Dia 21 de outubro</time>, no Rio de Janeiro.</p>
-        <a class="btn" href="https://example.com/pagamento" data-reveal>Quero participar</a>
+        <a class="btn" href="https://matricula.auvp.com.br/pay/mastermind-auvp-negocios-rio-de-janeiro" data-reveal>Quero participar</a>
       </div>
     </section>
 
@@ -309,7 +309,7 @@
                   <p class="cta-kicker"><span>Mastermind</span><span>com Raul Sena</span></p>
                   <p class="cta-text">É de casos assim que sai boa parte do que se discute no Mastermind. Aprenda com essas empresas antes de errar na sua.</p>
                   <p class="cta-when"><time datetime="2026-10-21">21 de outubro</time><span>Rio de Janeiro</span></p>
-                  <a class="btn btn-ink" href="https://example.com/pagamento">Quero aprender antes de errar</a>
+                  <a class="btn btn-ink" href="https://matricula.auvp.com.br/pay/mastermind-auvp-negocios-rio-de-janeiro">Quero aprender antes de errar</a>
                 </div>
                 <img class="cta-logo" src="/brand/auvp-negocios-h-preta.svg" width="356" height="78" alt="">
                 <footer class="pg-folio"><span>AUVP Negócios</span><span>5</span></footer>
@@ -418,7 +418,7 @@
         </div>
       </div>
       <div class="fit-cta" data-reveal>
-        <a class="btn" href="https://example.com/pagamento">Quero participar</a>
+        <a class="btn" href="https://matricula.auvp.com.br/pay/mastermind-auvp-negocios-rio-de-janeiro">Quero participar</a>
       </div>
     </section>
 
@@ -506,7 +506,7 @@
           <div class="cd-cell"><span class="cd-num" data-unit="s">--</span><span class="cd-unit">segundos</span></div>
         </div>
 
-        <a class="btn btn-lg" href="https://example.com/pagamento" data-reveal>Comprar meu ingresso</a>
+        <a class="btn btn-lg" href="https://matricula.auvp.com.br/pay/mastermind-auvp-negocios-rio-de-janeiro" data-reveal>Comprar meu ingresso</a>
       </div>
     </section>
 
@@ -528,7 +528,7 @@
           <li><a href="#para-quem-e">Para quem é</a></li>
           <li><a href="#auvp-business-day">AUVP Business Day</a></li>
           <li><a href="#duvidas">Dúvidas</a></li>
-          <li><a href="https://example.com/pagamento">Quero participar</a></li>
+          <li><a href="https://matricula.auvp.com.br/pay/mastermind-auvp-negocios-rio-de-janeiro">Quero participar</a></li>
         </ul>
       </div>
       <div class="site-footer__col site-footer__col--wide">
